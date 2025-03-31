@@ -1,85 +1,91 @@
 # 🚀 DevOps Getting Started – Beginner to Pro Toolkit
 
-Welcome to the **DevOps Getting Started** project by [skazi91](https://github.com/skazi91) — a community-first, beginner-friendly, and pro-scalable open-source resource.
-
-This repo gives you ready-to-use cheat sheets, automation guides, homelab setups, and cloud toolkits that you can learn from, clone, or extend in your own projects.
+Welcome to the **DevOps Getting Started** project by [skazi91](https://github.com/skazi91) — a complete open-source learning kit for aspiring DevOps, NetDevOps, SysAdmins, and homelab engineers.
 
 ---
 
 ## 🎯 How to Become a DevOps Engineer
 
-> Here's a practical, layered career path — perfect for beginners, self-learners, and IT pros leveling up:
+> A layered, hands-on learning path with real projects and toolkits:
 
-### 🧱 Level 1: Foundation (Start Here)
-- ✅ Learn Linux CLI & shell scripting
-- ✅ Understand Git & GitHub for version control
-- ✅ Practice networking basics & subnetting
-- ✅ Build your own homelab (Raspberry Pi, MikroTik, etc.)
+### 🧱 Level 1: Foundation
+- Learn Linux CLI & shell scripting
+- Understand Git & GitHub
+- Master networking basics
+- Build a homelab (Raspberry Pi, MikroTik, etc.)
 
-### 📦 Level 2: Containerization & Automation
-- ✅ Learn Docker & Docker Compose
-- ✅ Automate with Ansible or Bash
-- ✅ Manage servers & firewalls (iptables, UFW, MikroTik)
+### 📦 Level 2: Containers & Automation
+- Learn Docker & Compose
+- Automate with Bash or Ansible
+- Harden Linux and manage firewalls
 
 ### ☁️ Level 3: Cloud & Monitoring
-- ✅ Set up AWS EC2, S3, IAM (Free Tier)
-- ✅ Monitor with Netdata, Prometheus, Grafana
-- ✅ Back up using rsync, cron, or S3
+- Launch AWS EC2, use S3, IAM, and CLI
+- Monitor with Netdata, Prometheus, Grafana
+- Back up with rsync or cloud automation
 
-### 🔄 Level 4: CI/CD & Infrastructure as Code
-- ✅ Create pipelines with GitHub Actions / Jenkins
-- ✅ Use Terraform & Ansible to automate infrastructure
-- ✅ Apply IaC principles across local + cloud
+### 🔄 Level 4: CI/CD & Infra as Code
+- Build CI/CD with GitHub Actions and Jenkins
+- Use Ansible & Terraform for infrastructure
+- Adopt GitOps workflows
 
-### 🔐 Level 5: Security, Logs, and Real Projects
-- ✅ Harden your Linux & cloud services
-- ✅ Parse logs, audit activity, and respond to incidents
-- ✅ Build real-world projects & push to GitHub
+### 🔐 Level 5: Security & Portfolio Projects
+- Harden servers (SSH, fail2ban, sysctl)
+- Centralize logs (rsyslog, Loki, dashboards)
+- Create GitHub-worthy DevOps projects
 
-> 💼 Bonus: Document everything in your GitHub profile, contribute to open source, and prepare for interviews (like a pro!)
+> 💼 Document it all in your GitHub and show recruiters you’re job-ready!
 
 ---
 
-## 📚 Sections Overview
+## 🗂️ Folder Overview
 
 | Folder | Description |
 |--------|-------------|
-| `01_linux_basics/` | Command-line tools and Linux foundations |
-| `02_git_and_github/` | Git and GitHub basics for version control |
-| `03_docker_cheatsheet/` | Build, run, and manage containers |
-| `04_mikrotik_basics/` | MikroTik CLI + firewall rules |
-| `05_raspberrypi_setup/` | Setup Pi for DevOps, monitoring, or lab |
-| `06_devops_toolkit/` | Ansible, YAML, and automation basics |
-| `07_parallel_networking/` | Ubiquiti and Cisco quickstart guides |
-| `08_monitoring_and_firewalling/` | Netdata, Prometheus, firewalls, and secure configs |
-| `09_backup_and_recovery/` | Local and remote backup automation (rsync, S3, MikroTik) |
-| `10_cloud_basics/` | AWS EC2, S3, CLI, IAM and security hardening |
-| `11_ci_cd_pipelines/` | GitHub Actions, Jenkins, and pipeline workflows |
+| `01_linux_basics/` | Core CLI tools and Bash scripts |
+| `02_git_and_github/` | Git version control + GitHub workflows |
+| `03_docker_cheatsheet/` | Docker usage & automation |
+| `04_mikrotik_basics/` | MikroTik CLI + firewall samples |
+| `05_raspberrypi_setup/` | Raspberry Pi as DevOps lab hub |
+| `06_devops_toolkit/` | YAML, Ansible, and CLI automation |
+| `07_parallel_networking/` | Ubiquiti and Cisco network config |
+| `08_monitoring_and_firewalling/` | Monitoring tools and secure firewalling |
+| `09_backup_and_recovery/` | Local/cloud backups and recovery scripts |
+| `10_cloud_basics/` | AWS EC2, S3, CLI, IAM, and secure cloud use |
+| `11_ci_cd_pipelines/` | GitHub Actions, Jenkins, pipelines |
+| `12_log_management/` | System logs, journalctl, rsyslog, rotation |
+| `13_network_automation/` | Automate MikroTik, Cisco, SSH tasks |
+| `14_server_hardening/` | Secure SSH, fail2ban, sysctl, user policies |
+| `15_devops_projects/` | GitOps, backups, VM infra, IoT dashboards |
+
+📖 Browse them all via [`SUMMARY.md`](SUMMARY.md)
 
 ---
 
 ## ✨ Highlights
-- 📎 Markdown-only: portable and copy-paste friendly
-- 🧠 Beginner-proof: tested on Raspberry Pi and cloud servers
-- 🔐 Security-first: firewalls, backups, IAM, SSH
-- 💬 Community-powered: Contributions and translations welcome
+- 📎 100% Markdown-based, terminal-friendly
+- 🧠 Beginner-first, mentor-backed format
+- 🔐 Security-focused from the start
+- 💬 Community-contributable
 
 ---
 
-## 💡 Bonus Recommendations
-Check out these great open-source DevOps learning projects:
-
-- [devops-exercises](https://github.com/bregman-arie/devops-exercises) – Real interview questions
-- [awesome-devops](https://github.com/aaronron/awesome-devops) – Curated list of tools
+## 💡 Bonus Learning Projects
+- [devops-exercises](https://github.com/bregman-arie/devops-exercises) – Interview prep
+- [awesome-devops](https://github.com/aaronron/awesome-devops) – Tool index
 - [ansible-examples](https://github.com/ansible/ansible-examples) – Real-world playbooks
-- [netdata/netdata](https://github.com/netdata/netdata) – Real-time system monitoring
+- [netdata/netdata](https://github.com/netdata/netdata) – Live performance monitoring
 
 ---
 
-## 🤝 Contributing
-Pull requests and new cheat sheets welcome! See [`CONTRIBUTING.md`](CONTRIBUTING.md).
+## 🤝 Contribute or Remix
+- Pull requests welcome
+- Fork this as your personal DevOps wiki
+- Translate into other languages if you want to help more people
 
 ---
 
 ## 🧭 Start Exploring
-Head over to [`cheat_sheets/all_in_one.md`](cheat_sheets/all_in_one.md) to browse everything in one place!
+Head to [`SUMMARY.md`](SUMMARY.md) for the full index or open any folder to begin your journey.
+
+> 🧪 Your lab. Your tools. Your DevOps career. Built from scratch. Let's go!
