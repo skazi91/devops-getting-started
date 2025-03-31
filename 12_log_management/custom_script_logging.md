@@ -1,69 +1,65 @@
-# 📝 Logging in Your Own Scripts (Bash + Python)
+# ✍️ Logging in Your Own Scripts (Bash & Python)
 
-Learn how to add helpful logs to your own scripts for easier debugging, auditing, and DevOps automation visibility.
-
----
-
-## 🧰 Why Add Logging?
-- See what's running and when
-- Track errors and outputs
-- Forward script output to log files or syslog
+Learn how to add simple, structured logging to your Bash and Python scripts for better debugging, monitoring, and log forwarding.
 
 ---
 
-## 🧪 Bash Logging Example
+## 🧾 Bash Script Logging
+
+### 📜 Example
 ```bash
 #!/bin/bash
-LOGFILE="/var/log/my_script.log"
-
+LOGFILE="/var/log/myscript.log"
 log() {
-  echo "$(date '+%Y-%m-%d %H:%M:%S') | $1" >> "$LOGFILE"
+  echo "[$(date +'%Y-%m-%d %H:%M:%S')] $1" | tee -a "$LOGFILE"
 }
 
-log "Script started"
-# Run a command and log it
-if ping -c 1 8.8.8.8 > /dev/null; then
-  log "Internet connection OK"
-else
-  log "Internet check failed"
-fi
-log "Script ended"
+log "Script started."
+# Do something
+log "Completed task."
 ```
-> Make sure `/var/log/my_script.log` is writable or use your home dir.
 
 ---
 
-## 📤 Bash: Send to Syslog
+### 🔧 Tips for Bash Logging
+- Use `logger` to send messages to system journal:
 ```bash
-echo "Deployment started" | logger -t deploy-script
+echo "Backup started" | logger -t backup-script
 ```
-This will appear in `/var/log/syslog` or via `journalctl -t deploy-script`
+- Combine with `rsyslog` to forward custom script logs
 
 ---
 
-## 🐍 Python Logging Example
+## 🐍 Python Script Logging
+
+### 🔧 Built-in Logging Module
 ```python
 import logging
-
-logging.basicConfig(
-    filename='/var/log/myscript.log',
-    level=logging.INFO,
-    format='%(asctime)s %(levelname)s: %(message)s'
-)
+logging.basicConfig(filename='/var/log/myscript.log', level=logging.INFO,
+                    format='%(asctime)s [%(levelname)s] %(message)s')
 
 logging.info("Script started")
-try:
-    result = 1 / 0  # example error
-except Exception as e:
-    logging.error(f"Error occurred: {e}")
-logging.info("Script ended")
+logging.warning("This is a warning")
+logging.error("Something went wrong")
+```
+
+### 📤 Send to syslog (Optional)
+```python
+import logging.handlers
+syslog = logging.handlers.SysLogHandler(address='/dev/log')
+logger = logging.getLogger()
+logger.addHandler(syslog)
+logger.warning("This goes to syslog")
 ```
 
 ---
 
-## 🔁 Rotate Script Logs
-Add your script logs to `/etc/logrotate.d/` for cleanup and archiving.
+## 📦 Rotating Script Logs
+Make sure logs don’t grow endlessly:
 ```bash
+sudo nano /etc/logrotate.d/myscript
+```
+```conf
 /var/log/myscript.log {
   weekly
   rotate 4
@@ -75,18 +71,18 @@ Add your script logs to `/etc/logrotate.d/` for cleanup and archiving.
 
 ---
 
-## 📦 Logging Best Practices
-- Always include timestamps
-- Log at levels: INFO, WARNING, ERROR, DEBUG
-- Separate logs by function or module if needed
-- Store logs securely or forward to a collector
+## 🧠 Best Practices
+- Log at multiple levels (INFO, WARNING, ERROR)
+- Include timestamps
+- Use consistent formats
+- Rotate logs to avoid disk issues
 
 ---
 
-## 🧠 Bonus Tip
-Wrap scripts with global trap logging:
-```bash
-trap 'echo "Script failed on line $LINENO" | logger -t error-trap' ERR
-```
+## ✅ Use Cases
+- Backup scripts
+- Cron jobs
+- Health checks
+- Home automation
 
-> 💡 Logging isn't just for big servers — it's for every script you’ll maintain later!
+> 🧩 Logging transforms a one-off script into a production-grade tool.
