@@ -84,6 +84,14 @@ Use this to quickly explore and jump to any section.
 - `cloud_vm_autodeploy.md`
 - `log_forwarding_dashboard.md`
 
+## 🧰 16 – SysAdmin Operations
+- `cron_and_scheduled_tasks.md`
+- `disk_and_storage.md`
+- `user_group_permissions.md`
+- `incident_response_basics.md`
+- `systemctl_service_management.md`
+- `support_checklist.md`
+
 ---
 
 > 🧭 This `SUMMARY.md` is meant for quick navigation and indexing. Feel free to link it in your README!
