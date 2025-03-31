@@ -34,6 +34,11 @@ Welcome to the **DevOps Getting Started** project by [skazi91](https://github.co
 - Centralize logs (rsyslog, Loki, dashboards)
 - Create GitHub-worthy DevOps projects
 
+### 🛠️ Bonus: System Admin Ops (NEW!)
+- Manage users, storage, permissions, and services
+- Respond to incidents and troubleshoot faster
+- Learn support checklists for real-world jobs
+
 > 💼 Document it all in your GitHub and show recruiters you’re job-ready!
 
 ---
@@ -57,6 +62,7 @@ Welcome to the **DevOps Getting Started** project by [skazi91](https://github.co
 | `13_network_automation/` | Automate MikroTik, Cisco, SSH tasks |
 | `14_server_hardening/` | Secure SSH, fail2ban, sysctl, user policies |
 | `15_devops_projects/` | GitOps, backups, VM infra, IoT dashboards |
+| `16_sysadmin_operations/` | Storage, users, cron, services, incident response |
 
 📖 Browse them all via [`SUMMARY.md`](SUMMARY.md)
 
@@ -88,4 +94,4 @@ Welcome to the **DevOps Getting Started** project by [skazi91](https://github.co
 ## 🧭 Start Exploring
 Head to [`SUMMARY.md`](SUMMARY.md) for the full index or open any folder to begin your journey.
 
-> 🧪 Your lab. Your tools. Your DevOps career. Built from scratch. Let's go!
+> 🧪 Your lab. Your tools. Your DevOps & SysAdmin career. Built from scratch. Let’s go!
